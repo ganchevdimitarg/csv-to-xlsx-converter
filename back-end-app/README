@@ -1,0 +1,117 @@
+# CSV to XLSX Converter Project
+
+## Description
+The `csv-to-xlsx-converter` project is a production-grade application built using Java JDK 25, Spring Boot 3.5.5, Lombok, and Jakarta EE. This application provides a seamless solution for converting CSV files to XLSX format. It leverages existing project resources such as classes, utilities, services, and database connectors to ensure scalability, maintainability, and efficiency.
+
+## How to Set-Up
+To set up the `csv-to-xlsx-converter` project, follow these steps:
+
+1. **Clone the Repository**:
+```textmate
+git clone https://github.com/your-repo/csv-to-xlsx-converter.git
+   cd csv-to-xlsx-converter
+```
+
+
+2. **Configure Environment Variables**:
+   - Create a `.env` file in the project root directory.
+   - Add necessary environment variables, such as database credentials and API keys.
+
+3. **Build the Project**:
+```textmate
+./mvnw clean install
+```
+
+
+4. **Run the Application**:
+```textmate
+./mvnw spring-boot:run
+```
+
+
+## How to Start
+Once the application is built, you can start it by running the following command:
+
+```textmate
+./mvnw spring-boot:run
+```
+
+
+This will launch the Spring Boot application, and you should see output indicating that the server is up and running.
+
+## How to Use
+To use the `csv-to-xlsx-converter` project, follow these steps:
+
+1. **Upload CSV File**:
+   - Access the application's web interface (typically available at `http://localhost:8080`).
+   - Navigate to the file upload section.
+   - Select a CSV file to convert.
+
+2. **Convert and Download XLSX**:
+   - The application will process the uploaded CSV file and convert it to XLSX format.
+   - You will be provided with a download link for the converted XLSX file.
+
+3. **View Logs**:
+   - For debugging purposes, you can view logs by accessing `http://localhost:8080/actuator/loggers`.
+
+### API Endpoints
+- **Upload CSV File**: 
+```
+POST /api/v1/convert/upload
+  Content-Type: multipart/form-data
+```
+
+
+- **Check Conversion Status**:
+```
+GET /api/v1/convert/status/{conversionId}
+```
+
+
+### Error Handling
+The application includes robust error handling to manage exceptions gracefully. You can view detailed error logs using the `/actuator/loggers` endpoint.
+
+## Project Structure
+```
+csv-to-xlsx-parser
+├── .aiassistant
+├── .idea
+├── .mvn
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           ├── controller
+│   │   │           ├── dto
+│   │   │           ├── service
+│   │   │           └── util
+│   │   ├── resources
+│   │   │   ├── application.properties
+│   │   │   ├── logback-spring.xml
+│   │   │   └── static
+│   │   └── test
+│   │       └── java
+│   │           └── com
+│   │               └── example
+│   ├── target
+├── Dockerfile
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── output_from_resources.xlsx
+├── output_from_resources_alt.xlsx
+└── pom.xml
+```
+
+
+### Inter-File Dependencies
+- **Controller**: Handles HTTP requests and invokes services.
+- **Service**: Contains business logic for processing CSV to XLSX.
+- **Util**: Provides utility functions for file handling and conversion.
+
+## README/Config Files
+- **`application.properties`**: Configuration properties for Spring Boot and database settings.
+- **`logback-spring.xml`**: Log configuration using SLF4J and Logback.
+
+By following these instructions, you can successfully set up and use the `csv-to-xlsx-converter` project.
