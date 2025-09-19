@@ -9,7 +9,7 @@ To set up the `csv-to-xlsx-converter` project, follow these steps:
 1. **Clone the Repository**:
 ```textmate
 git clone https://github.com/your-repo/csv-to-xlsx-converter.git
-   cd csv-to-xlsx-converter
+   cd csv-to-xlsx-converter/back-end-app
 ```
 
 
