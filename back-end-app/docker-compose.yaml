@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  csv-to-xlsx-parser:
+    image: com.ganchevdimitarg/csv-to-xlsx-parser:0.0.1-SNAPSHOT
+    ports:
+      - "8089:8089"

@@ -1,0 +1,9 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: csv-to-xlsx-parser
+
+file:
+  upload-dir: /resource/xlsx
